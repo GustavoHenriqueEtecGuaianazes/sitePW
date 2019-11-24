@@ -2,62 +2,7 @@
 <html lang="zxx">
     
 
-<head>    
-        <script type="text/javascript">
-            function addProduto(){
-           var valorTotal = 0; 	
-        
-        var tabela = document.getElementById("tbProduto");
-
-        var td1 = document.createElement("td");
-        var td2 = document.createElement("td");
-        var td3 = document.createElement("td");
-        var tr = document.createElement("tr");
-
-        var cod = 1;
-
-        switch(cod){
-            case 1:
-                var descricao = "Alguma coisa";
-                var preco = "R$14,50"  
-                var qtde = document.getElementById("qtde").value;
-                valorTotal += (parseInt(qtde)*14.5)
-                break;
-            case 2:
-                var descricao = "Alguma coisa 3";
-                var preco = "R$20,50"  
-                var qtde = document.getElementById("qtde").value;
-                valorTotal += (parseInt(qtde)*20.5)
-                break;
-            case 3:
-                var descricao = "Alguma outta coisa";
-                var preco = "R$30,50"  
-                var qtde = document.getElementById("qtde").value;
-                valorTotal += (parseInt(qtde)*30.5)
-                break;
-        
-
-        }
-
-        var descricaoNode = document.createTextNode(descricao)     
-        var precoNode = document.createTextNode(preco)  
-        var qtdeNode = document.createTextNode(qtde)  
-
-        td1.appendChild(descricaoNode);
-        td2.appendChild(precoNode);
-        td3.appendChild(qtdeNode);
-
-        tr.appendChild(td1);
-        tr.appendChild(td2);
-        tr.appendChild(td3);
-
-        tabela.appendChild(tr);
-         
-
-        let copyText = document.getElementsByTagName("table")[0];
-        }
-        
-        </script>
+<head>        
         
         
         <meta charset="utf-8" />
@@ -82,7 +27,46 @@
         
         
     </head>
-    
+    <script type="text/javascript">
+        function addProduto(){
+           var valorTotal = 0; 	
+        
+        var tabela = document.getElementById("tbProduto");
+
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+        var tr = document.createElement("tr");
+
+        var cod = 1;
+
+        switch(cod){
+            case 1:
+                var descricao = "Alguma coisa";
+                var preco = "R$14,50"  
+                var qtde = document.getElementById("qtde").value;
+                valorTotal += (parseInt(qtde)*14.5)
+                break;
+            }
+
+        var descricaoNode = document.createTextNode(descricao)     
+        var precoNode = document.createTextNode(preco)  
+        var qtdeNode = document.createTextNode(qtde)  
+
+        td1.appendChild(descricaoNode);
+        td2.appendChild(precoNode);
+        td3.appendChild(qtdeNode);
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        tabela.appendChild(tr);
+         
+
+        
+        }
+        </script>   
     <body>
         
         <!-- Start: Header Section -->
@@ -118,7 +102,24 @@
                                                 <span>|</span>
                                                 <div class="header-cart dropdown">
                                                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                                        <i class="fa fa-shopping-cart"></i>
+                                                        <i class="fa fa-shopping-cart"><div class="dropdown-menu dropdown-menu-right">
+                                                            <form name = "formVenda">
+                                                                <table border="1"  id="tbProduto" style="color: black;font-family:monospace;border-width: 1px;" >
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Nome</th>
+                                                                            <th>Valor</th>
+                                                                            <th>Quantidade</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                
+                                                
+                                                                </table>
+                                                
+                                                
+                                                            </form>
+                                                        </div>
+                                                      </div></i>
                                                         <small>0</small>
                                                     </a>
                                                   
@@ -220,19 +221,28 @@
                     </div>
                 </div>
             </div>
-
-
-            <form name = "formVenda">
-                   <div id="table">
-                <label></label>
-                    <input type="text" id="qtde" style="width: 0% ;height: 0;">
+            
+            <!-- Controls -->
+            <a class="left carousel-control" href="#home-v1-header-carousel" data-slide="prev"></a>
+            <a class="right carousel-control" href="#home-v1-header-carousel" data-slide="next"></a>
+        </div>
+        
+        <div class="btn-group" style="padding-left: 4%;">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Right-aligned menu
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <form name = "formVenda">
+                    <label>Nome:</label>
+                    <input type="text" id="txtNome">
                     <br>
-                    <label style="width: 0% ;height: 0;"></label>
-                    <input type="text" id="codProduto" style="width: 0% ;height: 0;">
+                    <label>Cod Produto</label>
+                    <input type="text" id="codProduto">
                     <br>
-                    <label style="width: 0% ;height: 0;"></label>
-                    <input type="text" id="qtde" style="width: 0% ;height: 0;">
+                    <label>Quantidade</label>
+                    <input type="text" id="qtde">
                     <br>
+                    
                     <input type="button" value="Add" onclick="addProduto()">
                     <br>
                     <table border="1" id="tbProduto">
@@ -240,7 +250,7 @@
                             <tr>
                                 <th>Nome</th>
                                 <th>Valor</th>
-                                <th></th>
+                                <th>Quantidade</th>
                             </tr>
                         </thead>
     
@@ -249,17 +259,9 @@
     
     
                 </form>
-        </div>
-                    
-                
-            
-            <!-- Controls -->
-            <a class="left carousel-control" href="#home-v1-header-carousel" data-slide="prev"></a>
-            <a class="right carousel-control" href="#home-v1-header-carousel" data-slide="next"></a>
-        </div>
-        
-
-
+            </div>
+          </div>
+          <input type="button" value="Add" onclick="addProduto()">
 
                 <!-- Start: Social Network -->
                 <section class="social-network section-padding">

@@ -1,65 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="zxx">
     
 
 <head>        
-        <script>
-            
-            function addProduto1(){
-               
-            window.location.href = "compra.html";
-            var valorTotal = 0; 	
         
-        var tabela = document.getElementById("tbProduto");
-        var descricao = "Alguma coisa";
-        var preco = "R$14,50"  
-        valorTotal += 14.5;
-        
-
-        var td1 = compra.createElement("td");
-        var td2 = compra.createElement("td");
-        var td3 = compra.createElement("td");
-
-        var tr = compra.createElement("tr");
-        var descricaoNode = compra.createTextNode(descricao)     
-        var precoNode = compra.createTextNode(preco)  
-        var qtdeNode = compra.createTextNode(qtde)  
-
-        td1.appendChild(descricaoNode);
-        td2.appendChild(precoNode);
-        td3.appendChild(qtdeNode);
-
-        tr.appendChild(td1);
-        tr.appendChild(td2);
-        tr.appendChild(td3);
-
-        tabela.appendChild(tr);
-
-            }
-
-            
-            
-            
-            
-            
-            
-            
-            
-            </script>
-            
-             
-
-            
-
-            
-            
-            
-            
-            
-            
-            
-            
-            </script>
         
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
@@ -79,11 +23,468 @@
         <link href="css/mmenu.positioning.css" rel="stylesheet" type="text/css" />
         
         
-        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="style.css" rel="stylesheet" type="text/css" />
         
         
     </head>
-    
+    <script type="text/javascript">
+        function addProduto1(){
+           var valorTotal = 0; 	
+        
+        var tabela = document.getElementById("tbProduto");
+
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+        var tr = document.createElement("tr");
+
+        var cod = 1;
+
+        switch(cod){
+            case 1:
+                var descricao = "O Cortiço - Aluísio Azevedo";
+                var preco = "R$28,90"  
+                var qtde = document.getElementById("qtde").value;
+                valorTotal += (parseInt(qtde)*28.90)
+                break;
+            }
+
+        var descricaoNode = document.createTextNode(descricao)     
+        var precoNode = document.createTextNode(preco)  
+        var qtdeNode = document.createTextNode(qtde)  
+
+        td1.appendChild(descricaoNode);
+        td2.appendChild(precoNode);
+        td3.appendChild(qtdeNode);
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        tabela.appendChild(tr);
+         
+
+        
+        }
+        function addProduto2(){
+           var valorTotal = 0; 	
+        
+        var tabela = document.getElementById("tbProduto");
+
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+        var tr = document.createElement("tr");
+
+        var cod = 2;
+
+        switch(cod){
+            case 2:
+                var descricao = "<Memórias Póstumas de Brás Cubas - Machado de Assis>";
+                var preco = "R$25,90"  
+                var qtde = document.getElementById("qtde").value;
+                valorTotal += (parseInt(qtde)*25.90)
+                break;
+            }
+
+        var descricaoNode = document.createTextNode(descricao)     
+        var precoNode = document.createTextNode(preco)  
+        var qtdeNode = document.createTextNode(qtde)  
+
+        td1.appendChild(descricaoNode);
+        td2.appendChild(precoNode);
+        td3.appendChild(qtdeNode);
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        tabela.appendChild(tr);
+         
+
+        
+        }
+        function addProduto3(){
+           var valorTotal = 0; 	
+        
+        var tabela = document.getElementById("tbProduto");
+
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+        var tr = document.createElement("tr");
+
+        var cod = 3;
+
+        switch(cod){
+            case 3:
+                var descricao = "Iracema - José de Alencar";
+                var preco = "R$21,90"  
+                var qtde = document.getElementById("qtde").value;
+                valorTotal += (parseInt(qtde)*21.90)
+                break;
+            }
+
+        var descricaoNode = document.createTextNode(descricao)     
+        var precoNode = document.createTextNode(preco)  
+        var qtdeNode = document.createTextNode(qtde)  
+
+        td1.appendChild(descricaoNode);
+        td2.appendChild(precoNode);
+        td3.appendChild(qtdeNode);
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        tabela.appendChild(tr);
+         
+
+        
+        }
+        function addProduto4(){
+           var valorTotal = 0; 	
+        
+        var tabela = document.getElementById("tbProduto");
+
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+        var tr = document.createElement("tr");
+
+        var cod = 4;
+
+        switch(cod){
+            case 4:
+                var descricao = "O apanhador no campo de centeio - J. D. Salinger";
+                var preco = "R$23,90"  
+                var qtde = document.getElementById("qtde").value;
+                valorTotal += (parseInt(qtde)*23.90)
+                break;
+            }
+
+        var descricaoNode = document.createTextNode(descricao)     
+        var precoNode = document.createTextNode(preco)  
+        var qtdeNode = document.createTextNode(qtde)  
+
+        td1.appendChild(descricaoNode);
+        td2.appendChild(precoNode);
+        td3.appendChild(qtdeNode);
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        tabela.appendChild(tr);
+         
+
+        
+        }
+        function addProduto5(){
+           var valorTotal = 0; 	
+        
+        var tabela = document.getElementById("tbProduto");
+
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+        var tr = document.createElement("tr");
+
+        var cod = 5;
+
+        switch(cod){
+            case 5:
+                var descricao = "Diário de um banana vol. 1 - Jeff Kinney";
+                var preco = "R$28,90"  
+                var qtde = document.getElementById("qtde").value;
+                valorTotal += (parseInt(qtde)*28.90)
+                break;
+            }
+
+        var descricaoNode = document.createTextNode(descricao)     
+        var precoNode = document.createTextNode(preco)  
+        var qtdeNode = document.createTextNode(qtde)  
+
+        td1.appendChild(descricaoNode);
+        td2.appendChild(precoNode);
+        td3.appendChild(qtdeNode);
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        tabela.appendChild(tr);
+         
+
+        
+        }
+        function addProduto6(){
+           var valorTotal = 0; 	
+        
+        var tabela = document.getElementById("tbProduto");
+
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+        var tr = document.createElement("tr");
+
+        var cod = 6;
+
+        switch(cod){
+            case 6:
+                var descricao = "A culpa é das estrelas - John Green";
+                var preco = "R$24,90"  
+                var qtde = document.getElementById("qtde").value;
+                valorTotal += (parseInt(qtde)*24.90)
+                break;
+            }
+
+        var descricaoNode = document.createTextNode(descricao)     
+        var precoNode = document.createTextNode(preco)  
+        var qtdeNode = document.createTextNode(qtde)  
+
+        td1.appendChild(descricaoNode);
+        td2.appendChild(precoNode);
+        td3.appendChild(qtdeNode);
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        tabela.appendChild(tr);
+         
+
+        
+        }
+        function addProduto7(){
+           var valorTotal = 0; 	
+        
+        var tabela = document.getElementById("tbProduto");
+
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+        var tr = document.createElement("tr");
+
+        var cod = 7;
+
+        switch(cod){
+            case 7:
+                var descricao = "Cidades de papel - John Green";
+                var preco = "R$40,90"  
+                var qtde = document.getElementById("qtde").value;
+                valorTotal += (parseInt(qtde)*40.90)
+                break;
+            }
+
+        var descricaoNode = document.createTextNode(descricao)     
+        var precoNode = document.createTextNode(preco)  
+        var qtdeNode = document.createTextNode(qtde)  
+
+        td1.appendChild(descricaoNode);
+        td2.appendChild(precoNode);
+        td3.appendChild(qtdeNode);
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        tabela.appendChild(tr);
+         
+
+        
+        }
+        function addProduto8(){
+           var valorTotal = 0; 	
+        
+        var tabela = document.getElementById("tbProduto");
+
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+        var tr = document.createElement("tr");
+
+        var cod = 8;
+
+        switch(cod){
+            case 8:
+                var descricao = "Dom Quixote de La Mancha - Miguel de Cervantes" ;
+                var preco = "R$19,90"  
+                var qtde = document.getElementById("qtde").value;
+                valorTotal += (parseInt(qtde)*19.90)
+                break;
+            }
+
+        var descricaoNode = document.createTextNode(descricao)     
+        var precoNode = document.createTextNode(preco)  
+        var qtdeNode = document.createTextNode(qtde)  
+
+        td1.appendChild(descricaoNode);
+        td2.appendChild(precoNode);
+        td3.appendChild(qtdeNode);
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        tabela.appendChild(tr);
+         
+
+        
+        }
+        function addProduto9(){
+           var valorTotal = 0; 	
+        
+        var tabela = document.getElementById("tbProduto");
+
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+        var tr = document.createElement("tr");
+
+        var cod = 9;
+
+        switch(cod){
+            case 9:
+                var descricao = "O Pequeno Príncipe - Antoine de Saint-Exupéry";
+                var preco = "R$28,90"  
+                var qtde = document.getElementById("qtde").value;
+                valorTotal += (parseInt(qtde)*28.90)
+                break;
+            }
+
+        var descricaoNode = document.createTextNode(descricao)     
+        var precoNode = document.createTextNode(preco)  
+        var qtdeNode = document.createTextNode(qtde)  
+
+        td1.appendChild(descricaoNode);
+        td2.appendChild(precoNode);
+        td3.appendChild(qtdeNode);
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        tabela.appendChild(tr);
+         
+
+        
+        }
+        function addProduto10(){
+           var valorTotal = 0; 	
+        
+        var tabela = document.getElementById("tbProduto");
+
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+        var tr = document.createElement("tr");
+
+        var cod = 10;
+
+        switch(cod){
+            case 10:
+                var descricao = "A divina comédia";
+                var preco = "R$36,90"  
+                var qtde = document.getElementById("qtde").value;
+                valorTotal += (parseInt(qtde)*36.90)
+                break;
+            }
+
+        var descricaoNode = document.createTextNode(descricao)     
+        var precoNode = document.createTextNode(preco)  
+        var qtdeNode = document.createTextNode(qtde)  
+
+        td1.appendChild(descricaoNode);
+        td2.appendChild(precoNode);
+        td3.appendChild(qtdeNode);
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        tabela.appendChild(tr);
+         
+
+        
+        }
+        function addProduto11(){
+           var valorTotal = 0; 	
+        
+        var tabela = document.getElementById("tbProduto");
+
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+        var tr = document.createElement("tr");
+
+        var cod = 11;
+
+        switch(cod){
+            case 11:
+                var descricao = "Os Lusíadas - Luís de Camões";
+                var preco = "R$49,90"  
+                var qtde = document.getElementById("qtde").value;
+                valorTotal += (parseInt(qtde)*49.90)
+                break;
+            }
+
+        var descricaoNode = document.createTextNode(descricao)     
+        var precoNode = document.createTextNode(preco)  
+        var qtdeNode = document.createTextNode(qtde)  
+
+        td1.appendChild(descricaoNode);
+        td2.appendChild(precoNode);
+        td3.appendChild(qtdeNode);
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        tabela.appendChild(tr);
+         
+
+        
+        }
+        function addProduto12(){
+           var valorTotal = 0; 	
+        
+        var tabela = document.getElementById("tbProduto");
+
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+        var tr = document.createElement("tr");
+
+        var cod = 12;
+
+        switch(cod){
+            case 12:
+                var descricao = "O Alienista";
+                var preco = "R$39,90"  
+                var qtde = document.getElementById("qtde").value;
+                valorTotal += (parseInt(qtde)*39.90)
+                break;
+            }
+
+        var descricaoNode = document.createTextNode(descricao)     
+        var precoNode = document.createTextNode(preco)  
+        var qtdeNode = document.createTextNode(qtde)  
+
+        td1.appendChild(descricaoNode);
+        td2.appendChild(precoNode);
+        td3.appendChild(qtdeNode);
+
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        tabela.appendChild(tr);
+         
+
+        
+        }
+        </script>
     <body>
         
         <!-- Start: Header Section -->
@@ -120,7 +521,24 @@
                                                 <span>|</span>
                                                 <div class="header-cart dropdown">
                                                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                                        <i class="fa fa-shopping-cart"></i>
+                                                        <i class="fa fa-shopping-cart"><div class="dropdown-menu dropdown-menu-right">
+                                                            <form name = "formVenda">
+                                                                <table border="1"  id="tbProduto" style="color: black;font-family:monospace;border-width: 1px;" >
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Nome</th>
+                                                                            <th>Valor</th>
+                                                                            <th>Quantidade</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                
+                                                
+                                                                </table>
+                                                
+                                                
+                                                            </form>
+                                                        </div>
+                                                      </div></i>
                                                         <small>0</small>
                                                     </a>
                                                   
@@ -150,7 +568,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <div class="mobile-menu hidden-lg hidden-md">
                             <a href="#mobile-menu"><i class="fa fa-navicon"></i></a>
                             <div id="mobile-menu">
@@ -229,14 +646,678 @@
             <a class="right carousel-control" href="#home-v1-header-carousel" data-slide="next"></a>
         </div>
 
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary" onclick="addProduto1()">Adicionar ao carrinho</a>
-            </div>
-          </div>
+
+
+
+        
+    </div>
+   
+            <div class="books-list" style="padding-top: 20px;">
+                <article> 
+                    <div class="single-book-box">                                                
+                        <div class="post-thumbnail">
+                            <div class="book-list-icon yellow-icon"></div>
+                            <a href="books-media-detail-v1.html"><img alt="Book" src="images/1.jpg" /></a>                                                                 </div>
+                        <div class="post-detail">
+                            <div class="books-social-sharing">
+                                <ul>
+                                    <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                            
+                            <header class="entry-header">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h3 class="entry-title">
+                                            <a href="books-media-detail-v1.html">O Cortiço</a>
+                                        </h3>
+                                        <ul>
+                                            <li><strong>Autor:</strong> Aluísio Azevedo</li>
+                                            <li><strong>Código:</strong> 1</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <ul>
+                                            <li>
+                                                <div class="rating">
+                                                    <strong>Avaliação: </strong>
+                                                    <span>☆</span>
+                                                    <span>☆</span>
+                                                    <span>☆</span>
+                                                    <span>☆</span>
+                                                    <span>☆</span>
+                                                </div>
+                                            </li>
+                                        </ul>                                                                
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="entry-content">
+                                <p>Dono de uma pedreira e de uma venda, consegue comprar algumas casas - inicialmente três, passando depois a noventa - com a ajuda de sua companheira Bertoleza, uma escrava fugida. Através de pequenos furtos de materiais de construção, o cortiço vai aumentando.</p>
+                                <h3>R$28,90</h3>
+                                <br>
+                            </div>
+                            <footer class="entry-footer">
+                                <a class="btn btn-dark-gray" href="compra.html">Comprar</a>
+                            </footer>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </article>
+                <article> 
+                        <div class="single-book-box">                                                
+                            <div class="post-thumbnail">
+                                <div class="book-list-icon yellow-icon"></div>
+                                <a href="books-media-detail-v1.html"><img alt="Book" src="images/2.jpg" /></a>                                                                 </div>
+                            <div class="post-detail">
+                                <div class="books-social-sharing">
+                                    <ul>
+                                        <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                              
+                                <header class="entry-header">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <h3 class="entry-title">
+                                                <a href="books-media-detail-v1.html">Memória Póstumas de Brás Cubas</a>
+                                            </h3>
+                                            <ul>
+                                                <li><strong>Autor:</strong> Machado de Assis</li>
+                                                <li><strong>Código:</strong> 2</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul>
+                                                <li>
+                                                    <div class="rating">
+                                                        <strong>Avaliação: </strong>
+                                                        <span>☆</span>
+                                                        <span>☆</span>
+                                                        <span>☆</span>
+                                                        <span>☆</span>
+                                                        <span>☆</span>
+                                                    </div>
+                                                </li>
+                                            </ul>                                                                
+                                        </div>
+                                    </div>
+                                </header>
+                                <div class="entry-content">
+                                    <p>Memórias Póstumas de Brás Cubas é um livro de Machado de Assis, publicado como folhetim entre março e dezembro de 1880 na Revista Brasileira. A obra é narrada pelo "defunto autor" Brás Cubas, que conta as suas memórias sem as amarras da vida. Ousado e inovador, o livro se tornou um divisor de águas na produção literária do escritor brasileiro.</p>
+                                    <h3>R$25,90</h3>
+                                <br>
+                                </div>
+                                <footer class="entry-footer">
+                                    <a class="btn btn-dark-gray" href="compra.html">Comprar</a>
+                                </footer>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </article>
+                    <article> 
+                            <div class="single-book-box">                                                
+                                <div class="post-thumbnail">
+                                    <div class="book-list-icon yellow-icon"></div>
+                                    <a href="books-media-detail-v1.html"><img alt="Book" src="images/3.jpg" /></a>                                                                 </div>
+                                <div class="post-detail">
+                                    <div class="books-social-sharing">
+                                        <ul>
+                                            <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
+                                            <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <header class="entry-header">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <h3 class="entry-title">
+                                                    <a href="books-media-detail-v1.html">Iracema</a>
+                                                </h3>
+                                                <ul>
+                                                    <li><strong>Autor:</strong> José de Alencar</li>
+                                                    <li><strong>Código:</strong> 3</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <ul>
+                                                    <li>
+                                                        <div class="rating">
+                                                            <strong>Avaliação: </strong>
+                                                            <span>☆</span>
+                                                            <span>☆</span>
+                                                            <span>☆</span>
+                                                            <span>☆</span>
+                                                            <span>☆</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>                                                                
+                                            </div>
+                                        </div>
+                                    </header>
+                                    <div class="entry-content">
+                                        <p>Irapuã nutre amor não correspondido pela virgem e logo reconhece no português um inimigo mortal. ... Martim, Iracema e Caubi refugiam-se na taba do pajé Araquém, que usa de um truque para salvar o português da ira do chefe guerreiro. Sucede-se o encontro amoroso entre Martim e Iracema, narrado delicadamente pelo autor.</p>
+                                        <h3>R$21,90</h3>
+                                    <br>
+                                    </div>
+                                    <footer class="entry-footer">
+                                        <a class="btn btn-dark-gray" href="compra.html">Comprar</a>
+                                    </footer>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </article>
+                        <article> 
+                                <div class="single-book-box">                                                
+                                    <div class="post-thumbnail">
+                                        <div class="book-list-icon yellow-icon"></div>
+                                        <a href="books-media-detail-v1.html"><img alt="Book" src="images/4.jpg" /></a>                                                                 </div>
+                                    <div class="post-detail">
+                                        <div class="books-social-sharing">
+                                            <ul>
+                                                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                                <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
+                                                <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <header class="entry-header">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <h3 class="entry-title">
+                                                        <a href="books-media-detail-v1.html">O Apanhador no Campo de Centeio</a>
+                                                    </h3>
+                                                    <ul>
+                                                        <li><strong>Autor:</strong> J. D. Salinger</li>
+                                                        <li><strong>Código:</strong> 4</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <ul>
+                                                        <li>
+                                                            <div class="rating">
+                                                                <strong>Avaliação: </strong>
+                                                                <span>☆</span>
+                                                                <span>☆</span>
+                                                                <span>☆</span>
+                                                                <span>☆</span>
+                                                                <span>☆</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>                                                                
+                                                </div>
+                                            </div>
+                                        </header>
+                                        <div class="entry-content">
+                                            <p>Holden Caulfield é um adolescente mal humorado que não vê sentido em nada do que é obrigado a fazer e está sempre reclamando de tudo e de todos. Depois de ser expulso da escola ele faz suas malas e decide dar umas voltas pela cidade antes de chegar a hora de ir para casa e ter que enfrentar os pais.</p>
+                                            <h3>R$23,90</h3>
+                                <br>        
+                                        </div>
+                                        <footer class="entry-footer">
+                                            <a class="btn btn-dark-gray" href="compra.html">Comprar</a>
+                                        </footer>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </article>
+                            <article> 
+                                    <div class="single-book-box">                                                
+                                        <div class="post-thumbnail">
+                                            <div class="book-list-icon yellow-icon"></div>
+                                            <a href="books-media-detail-v1.html"><img alt="Book" src="images/5.jpg" /></a>                                                                 </div>
+                                        <div class="post-detail">
+                                            <div class="books-social-sharing">
+                                                <ul>
+                                                    <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                    <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                                    <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
+                                                    <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <header class="entry-header">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <h3 class="entry-title">
+                                                            <a href="books-media-detail-v1.html">Diário de Um Banana - vol. 1</a>
+                                                        </h3>
+                                                        <ul>
+                                                            <li><strong>Autor:</strong> Jeff Kinney</li>
+                                                            <li><strong>Código:</strong> 5</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="rating">
+                                                                    <strong>Avaliação: </strong>
+                                                                    <span>☆</span>
+                                                                    <span>☆</span>
+                                                                    <span>☆</span>
+                                                                    <span>☆</span>
+                                                                    <span>☆</span>
+                                                                </div>
+                                                            </li>
+                                                        </ul>                                                                
+                                                    </div>
+                                                </div>
+                                            </header>
+                                            <div class="entry-content">
+                                                <p>Não é fácil ser criança. E ninguém sabe disso melhor do que Greg Heffley, que se vê mergulhado no ensino fundamental, onde fracotes subdesenvolvidos dividem os corredores com garotos que são mais altos, mais malvados e já se barbeiam.</p>
+                                                <h3>R$28,90</h3>
+                                                <br>
+                                            </div>
+                                            <footer class="entry-footer">
+                                                <a class="btn btn-dark-gray" href="compra.html">Comprar</a>
+                                            </footer>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </article>
+                                <article> 
+                                        <div class="single-book-box">                                                
+                                            <div class="post-thumbnail">
+                                                <div class="book-list-icon yellow-icon"></div>
+                                                <a href="books-media-detail-v1.html"><img alt="Book" src="images/6.jpg" /></a>                                                                 </div>
+                                            <div class="post-detail">
+                                                <div class="books-social-sharing">
+                                                    <ul>
+                                                        <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                        <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                        <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                                        <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
+                                                        <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                
+                                                <header class="entry-header">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <h3 class="entry-title">
+                                                                <a href="books-media-detail-v1.html">A Culpa É das Estrelas</a>
+                                                            </h3>
+                                                            <ul>
+                                                                <li><strong>Autor:</strong> John Green</li>
+                                                                <li><strong>Código:</strong> 6</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="rating">
+                                                                        <strong>Avaliação: </strong>
+                                                                        <span>☆</span>
+                                                                        <span>☆</span>
+                                                                        <span>☆</span>
+                                                                        <span>☆</span>
+                                                                        <span>☆</span>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>                                                                
+                                                        </div>
+                                                    </div>
+                                                </header>
+                                                <div class="entry-content">
+                                                    <p>Publicado em 2012, o livro (e depois o filme) A Culpa é das Estrelas, escrito por John Green, emocionou crianças, jovens e adultos. Hazel Grace descobre, enquanto ainda era criança, que possui um tipo de câncer com chances mínimas de cura. Desde então, sua vida se resume a tratamentos para tentar prolongar seu tempo de vida.</p>
+                                                    <h3>R$24,90</h3>
+                                <br>
+                                                </div>
+                                                <footer class="entry-footer">
+                                                    <a class="btn btn-dark-gray" href="compra.html">Comprar</a>
+                                                </footer>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </article>
+                                    <article> 
+                                            <div class="single-book-box">                                                
+                                                <div class="post-thumbnail">
+                                                    <div class="book-list-icon yellow-icon"></div>
+                                                    <a href="books-media-detail-v1.html"><img alt="Book" src="images/7.jpg" /></a>                                                                 </div>
+                                                <div class="post-detail">
+                                                    <div class="books-social-sharing">
+                                                        <ul>
+                                                            <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                            <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                                            <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
+                                                            <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    
+                                                    <header class="entry-header">
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <h3 class="entry-title">
+                                                                    <a href="books-media-detail-v1.html">Cidades de Papel</a>
+                                                                </h3>
+                                                                <ul>
+                                                                    <li><strong>Autor:</strong> John Green</li>
+                                                                    <li><strong>Código:</strong> 7</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="rating">
+                                                                            <strong>Avaliação: </strong>
+                                                                            <span>☆</span>
+                                                                            <span>☆</span>
+                                                                            <span>☆</span>
+                                                                            <span>☆</span>
+                                                                            <span>☆</span>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>                                                                
+                                                            </div>
+                                                        </div>
+                                                    </header>
+                                                    <div class="entry-content">
+                                                        <p>Prestes a completar 38 anos, o nerd já possui seis livros lançados mundialmente sendo que desses, quatro tiveram seus direitos autorais adquiridos para o cinema. O primeiro foi um grande sucesso: impossível não se emocionar com o filme ou, ao menos, se encantar com a trilha sonora de “A Culpa é das Estrelas“.</p>
+                                                        <h3>R$40,90</h3>
+                                <br>
+                                                    </div>
+                                                    <footer class="entry-footer">
+                                                        <a class="btn btn-dark-gray" href="compra.html">Comprar</a>
+                                                    </footer>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+                                        </article>
+                                        <article> 
+                                                <div class="single-book-box">                                                
+                                                    <div class="post-thumbnail">
+                                                        <div class="book-list-icon yellow-icon"></div>
+                                                        <a href="books-media-detail-v1.html"><img alt="Book" src="images/8.jpg" /></a>                                                                 </div>
+                                                    <div class="post-detail">
+                                                        <div class="books-social-sharing">
+                                                            <ul>
+                                                                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                                <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                                                <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
+                                                                <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        
+                                                        <header class="entry-header">
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <h3 class="entry-title">
+                                                                        <a href="books-media-detail-v1.html">Dom Quixote de La Mancha</a>
+                                                                    </h3>
+                                                                    <ul>
+                                                                        <li><strong>Autor:</strong> Miguel de Cervantes</li>
+                                                                        <li><strong>Código:</strong> 8</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <div class="rating">
+                                                                                <strong>Avaliação: </strong>
+                                                                                <span>☆</span>
+                                                                                <span>☆</span>
+                                                                                <span>☆</span>
+                                                                                <span>☆</span>
+                                                                                <span>☆</span>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>                                                                
+                                                                </div>
+                                                            </div>
+                                                        </header>
+                                                        <div class="entry-content">
+                                                            <p>Dom Quixote de La Mancha (El Ingenioso Hidalgo Don Quixote de La Mancha, no original) é uma obra do escritor espanhol Miguel de Cervantes, publicada em duas partes. A primeira surgiu em 1605 e a segunda dez anos depois, em 1615. Quando o livro foi traduzido para inglês e francês obteve um êxito súbito, arrebatando leitores de diversas origens.</p>
+                                                            <h3>R$19,90</h3>
+                                <br>
+                                                        </div>
+                                                        <footer class="entry-footer">
+                                                            <a class="btn btn-dark-gray" href="compra.html">Comprar</a>
+                                                        </footer>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </div>
+                                            </article>
+                                            <article> 
+                                                    <div class="single-book-box">                                                
+                                                        <div class="post-thumbnail">
+                                                            <div class="book-list-icon yellow-icon"></div>
+                                                            <a href="books-media-detail-v1.html"><img alt="Book" src="images/9.jpg" /></a>                                                                 </div>
+                                                        <div class="post-detail">
+                                                            <div class="books-social-sharing">
+                                                                <ul>
+                                                                    <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                                    <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                                    <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                                                    <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
+                                                                    <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                            <header class="entry-header">
+                                                                <div class="row">
+                                                                    <div class="col-sm-6">
+                                                                        <h3 class="entry-title">
+                                                                            <a href="books-media-detail-v1.html">O Pequeno Príncipe</a>
+                                                                        </h3>
+                                                                        <ul>
+                                                                            <li><strong>Autor:</strong> Antoine de Saint-Exupéry</li>
+                                                                            <li><strong>Código:</strong> 9</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <ul>
+                                                                            <li>
+                                                                                <div class="rating">
+                                                                                    <strong>Avaliação: </strong>
+                                                                                    <span>☆</span>
+                                                                                    <span>☆</span>
+                                                                                    <span>☆</span>
+                                                                                    <span>☆</span>
+                                                                                    <span>☆</span>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>                                                                
+                                                                    </div>
+                                                                </div>
+                                                            </header>
+                                                            <div class="entry-content">
+                                                                <p>Um piloto cai com seu avião no deserto e ali encontra uma criança loura e frágil. Ela diz ter vindo de um pequeno planeta distante. ... Não há adulto que não se comova ao se lembrar de quando o leu quando criança.</p>
+                                                                <h3>R$28,90</h3>
+                                                                <br>
+                                                            </div>
+                                                            <footer class="entry-footer">
+                                                                <a class="btn btn-dark-gray" href="Comprar.html">Comprar</a>
+                                                            </footer>
+                                                        </div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </article>
+                                                <article> 
+                                                        <div class="single-book-box">                                                
+                                                            <div class="post-thumbnail">
+                                                                <div class="book-list-icon yellow-icon"></div>
+                                                                <a href="books-media-detail-v1.html"><img alt="Book" src="images/10.jpg" /></a>                                                                 </div>
+                                                            <div class="post-detail">
+                                                                <div class="books-social-sharing">
+                                                                    <ul>
+                                                                        <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                                        <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                                        <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                                                        <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
+                                                                        <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                                                    </ul>
+                                                                </div>
+                                                                
+                                                                <header class="entry-header">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6">
+                                                                            <h3 class="entry-title">
+                                                                                <a href="books-media-detail-v1.html">A Divina Comédia</a>
+                                                                            </h3>
+                                                                            <ul>
+                                                                                <li><strong>Autor:</strong> Dante Alighieri</li>
+                                                                                <li><strong>Código:</strong> 10</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="col-sm-6">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <div class="rating">
+                                                                                        <strong>Avaliação: </strong>
+                                                                                        <span>☆</span>
+                                                                                        <span>☆</span>
+                                                                                        <span>☆</span>
+                                                                                        <span>☆</span>
+                                                                                        <span>☆</span>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>                                                                
+                                                                        </div>
+                                                                    </div>
+                                                                </header>
+                                                                <div class="entry-content">
+                                                                    <p>O protagonista do livro A Divina Comédia é o próprio poeta Dante Alighieri que percorre uma viagem entre três instâncias completamente distintas: o Inferno, o Purgatório e o Paraíso. ... Enquanto se encontra no inferno, Dante recebe a ajuda do poeta romano Virgílio, que serve como uma espécie de guia.</p>
+                                                                    <h3>R$36,90</h3>
+                                                                    <br>
+                                                                </div>
+                                                                <footer class="entry-footer">
+                                                                    <a class="btn btn-dark-gray" href="compra.html">Comprar</a>
+                                                                </footer>
+                                                            </div>
+                                                            <div class="clear"></div>
+                                                        </div>
+                                                    </article>
+                                                    <article> 
+                                                            <div class="single-book-box">                                                
+                                                                <div class="post-thumbnail">
+                                                                    <div class="book-list-icon yellow-icon"></div>
+                                                                    <a href="books-media-detail-v1.html"><img alt="Book" src="images/11.jpg" /></a>                                                                 </div>
+                                                                <div class="post-detail">
+                                                                    <div class="books-social-sharing">
+                                                                        <ul>
+                                                                            <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                                            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                                            <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                                                            <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
+                                                                            <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    
+                                                                    <header class="entry-header">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <h3 class="entry-title">
+                                                                                    <a href="books-media-detail-v1.html">Os Lusíadas</a>
+                                                                                </h3>
+                                                                                <ul>
+                                                                                    <li><strong>Autor:</strong> Luís Vaz de Camões</li>
+                                                                                    <li><strong>Código:</strong> 11</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="col-sm-6">
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <div class="rating">
+                                                                                            <strong>Avaliação: </strong>
+                                                                                            <span>☆</span>
+                                                                                            <span>☆</span>
+                                                                                            <span>☆</span>
+                                                                                            <span>☆</span>
+                                                                                            <span>☆</span>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                </ul>                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </header>
+                                                                    <div class="entry-content">
+                                                                        <p>Publicado em 1572, o livro Os Lusíadas, de Camões, é um clássico da literatura portuguesa. Divido em dez cantos, o longo poema épico é um grande elogio ao povo português.</p>
+                                                                        <h3>R$49,99</h3>
+                                                                        <br>    
+                                                                    </div>
+                                                                    <footer class="entry-footer">
+                                                                        <a class="btn btn-dark-gray" href="compra.html">Comprar</a>
+                                                                    </footer>
+                                                                </div>
+                                                                <div class="clear"></div>
+                                                            </div>
+                                                        </article>
+                                                        <article> 
+                                                                <div class="single-book-box">                                                
+                                                                    <div class="post-thumbnail">
+                                                                        <div class="book-list-icon yellow-icon"></div>
+                                                                        <a href="books-media-detail-v1.html"><img alt="Book" src="images/12.jpg" /></a>                                                                 </div>
+                                                                    <div class="post-detail">
+                                                                        <div class="books-social-sharing">
+                                                                            <ul>
+                                                                                <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                                                                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                                                                <li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                                                                <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
+                                                                                <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        
+                                                                        <header class="entry-header">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-6">
+                                                                                    <h3 class="entry-title">
+                                                                                        <a href="books-media-detail-v1.html">O Alienista</a>
+                                                                                    </h3>
+                                                                                    <ul>
+                                                                                        <li><strong>Autor:</strong> Machado de Assis</li>
+                                                                                        <li><strong>Código:</strong> 12</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                    <ul>
+                                                                                        <li>
+                                                                                            <div class="rating">
+                                                                                                <strong>Avaliação: </strong>
+                                                                                                <span>☆</span>
+                                                                                                <span>☆</span>
+                                                                                                <span>☆</span>
+                                                                                                <span>☆</span>
+                                                                                                <span>☆</span>
+                                                                                            </div>
+                                                                                        </li>
+                                                                                    </ul>                                                                
+                                                                                </div>
+                                                                            </div>
+                                                                        </header>
+                                                                        <div class="entry-content">
+                                                                            <p>Após conquistar respeito em sua carreira de médico na Europa e no Brasil, o Dr. Simão Bacamarte retorna à sua terra-natal, Itaguaí, para se dedicar ainda mais a sua profissão. Após um tempo na cidade, casa-se com a já viúva D. Evarista, uma mulher por volta dos vinte e cinco anos e que não era nem bonita e nem simpática. O médico a escolheu por julgá-la capaz de lhe gerar bons filhos, mas ela acaba não tendo nenhum sequer.</p>
+                                                                            <h3>R$39,90</h3>
+                                                                            <br>
+                                                                        </div>
+                                                                        <footer class="entry-footer">
+                                                                            <a class="btn btn-dark-gray" href="compra.html">Comprar</a>
+                                                                        </footer>
+                                                                    </div>
+                                                                    <div class="clear"></div>
+                                                                </div>
+                                                            </article>
+
+                
+                            </footer>
+                        </div>
+                    </div>
 
 
 
