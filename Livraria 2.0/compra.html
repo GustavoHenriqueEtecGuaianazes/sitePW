@@ -5,7 +5,7 @@
 <head>        
         
         
-        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
         
         
@@ -24,445 +24,797 @@
         
         
         <link href="css/style.css" rel="stylesheet" type="text/css" />
-        
-        
-    </head>
-    <script type="text/javascript">
-        function addProduto(){
-           var valorTotal = 0; 	
-        
-        var tabela = document.getElementById("tbProduto");
-
-        var td1 = document.createElement("td");
-        var td2 = document.createElement("td");
-        var td3 = document.createElement("td");
-        var tr = document.createElement("tr");
-
-        var cod = 1;
-
-        switch(cod){
-            case 1:
-                var descricao = "Alguma coisa";
-                var preco = "R$14,50"  
-                var qtde = document.getElementById("qtde").value;
-                valorTotal += (parseInt(qtde)*14.5)
-                break;
+    
+        <!-- Adicionando Javascript -->
+        <script type="text/javascript" >
+            var valorTotal = 0; 
+            
+            
+            function addProduto(){
+               
+            
+            var tabela = document.getElementById("tbProduto");
+    
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+            var td3 = document.createElement("td");
+            var tr = document.createElement("tr");
+            var cod = 0;
+            cod = parseInt(document.getElementById("slcLivro").value);
+            
+            switch(cod){
+                case 0:
+                    alert("Escolha um livro válido");
+                    history.go(0);
+                    break;
+                case 1:
+                    var descricao = "O CORTIÇO - Aluísio Azevedo ";
+                    var preco = "R$28,90"  
+                    var qtde = document.getElementById("qtde").value;
+                    valorTotal =valorTotal +(parseInt(qtde)*28.90)
+                    break;
+                case 2:
+                    var descricao = "MEMÓRIA PÓSTUMAS DE BRÁS CUBAS - Machado de Assis";
+                    var preco = "R$25,90"  
+                    var qtde = document.getElementById("qtde").value;
+                    valorTotal = valorTotal +(parseInt(qtde)*25.90)
+                    break;
+                case 3:
+                    var descricao = "IRACEMA - José de Alencar";
+                    var preco = "R$21,90"  
+                    var qtde = document.getElementById("qtde").value;
+                    valorTotal = valorTotal +(parseInt(qtde)*21.90)
+                    break;
+                case 4:
+                    var descricao = "O APANHADOR NO CAMPO DE CENTEIO - J. D. Salinger";
+                    var preco = "R$23,90"  
+                    var qtde = document.getElementById("qtde").value;
+                    valorTotal = valorTotal +(parseInt(qtde)*23.90)
+                    break;
+                case 5:
+                    var descricao = "DIÁRIO DE UM BANANA - VOL. 1 - Jeff Kinney";
+                    var preco = "R$28,90"  
+                    var qtde = document.getElementById("qtde").value;
+                    valorTotal = valorTotal +(parseInt(qtde)*28.90)
+                    break;
+                case 6:
+                    var descricao = "A CULPA É DAS ESTRELAS - John Green";
+                    var preco = "R$24,90"  
+                    var qtde = document.getElementById("qtde").value;
+                    valorTotal = valorTotal +(parseInt(qtde)*24.90)
+                    break;
+                case 7:
+                    var descricao = "CIDADES DE PAPEL- John Green";
+                    var preco = "R$40,90"  
+                    var qtde = document.getElementById("qtde").value;
+                    valorTotal = valorTotal +(parseInt(qtde)*40.90)
+                    break;
+                case 8:
+                    var descricao = "DOM QUIXOTE DE LA MANCHA - Miguel de Cervantes";
+                    var preco = "R$19,90"  
+                    var qtde = document.getElementById("qtde").value;
+                    valorTotal =valorTotal + (parseInt(qtde)*19.90)
+                    break;
+                case 9:
+                    var descricao = "O PEQUENO PRÍNCIPE - Antoine de Saint-Exupéry";
+                    var preco = "R$28,90"  
+                    var qtde = document.getElementById("qtde").value;
+                    valorTotal = valorTotal +(parseInt(qtde)*28.90)
+                    break;
+                case 10:
+                    var descricao = "A DIVINA COMÉDIA - Dante Alighieri";
+                    var preco = "R$49,99"  
+                    var qtde = document.getElementById("qtde").value;
+                    valorTotal = valorTotal +(parseInt(qtde)*36.90)
+                    break;
+                case 11:
+                    var descricao = "OS LUSÍADAS - Luís Vaz de Camões";
+                    var preco = "R$49,99"  
+                    var qtde = document.getElementById("qtde").value;
+                    valorTotal = valorTotal +(parseInt(qtde)*49.99)
+                    break;
+                case 12:
+                    var descricao = "O ALIENISTA - Machado de Assis";
+                    var preco = "R$39,90"  
+                    var qtde = document.getElementById('qtde').value;
+                    valorTotal =valorTotal + (parseInt(qtde)*39.90)
+                    break;
+                    
+            
+    
             }
+            
+            var descricaoNode = document.createTextNode(descricao)     
+            var precoNode = document.createTextNode(preco)  
+            var qtdeNode = document.createTextNode(qtde)  
 
-        var descricaoNode = document.createTextNode(descricao)     
-        var precoNode = document.createTextNode(preco)  
-        var qtdeNode = document.createTextNode(qtde)  
-
-        td1.appendChild(descricaoNode);
-        td2.appendChild(precoNode);
-        td3.appendChild(qtdeNode);
-
-        tr.appendChild(td1);
-        tr.appendChild(td2);
-        tr.appendChild(td3);
-
-        tabela.appendChild(tr);
-         
-
-        
+            
+            
+            
+            td1.appendChild(descricaoNode);
+            td2.appendChild(precoNode);
+            td3.appendChild(qtdeNode);
+    
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+    
+            tabela.appendChild(tr);
+             
+            document.getElementById("slcLivro").value = "Escolha seu livro";
+            document.getElementById("slcLivro").focus();
+    
+            document.getElementById("valorTotal").value = valorTotal;
+            }
+            
+            
+            function mascara_data(campo, valor){
+      var mydata = '';
+      mydata = mydata + valor;
+      if (mydata.length == 2){
+        mydata = mydata + '/';
+        campo.value = mydata;
+      }
+      if (mydata.length == 5){
+        mydata = mydata + '/';
+        campo.value = mydata;
+      }
+    } 
+    function mascara(i){
+       
+       var v = i.value;
+       
+       if(isNaN(v[v.length-1])){ // impede entrar outro caractere que não seja número
+          i.value = v.substring(0, v.length-1);
+          return;
+       }
+       
+       i.setAttribute("maxlength", "14");
+       if (v.length == 3 || v.length == 7) i.value += ".";
+       if (v.length == 11) i.value += "-";
+    
+    }
+    function limpa_formulário_cep() {
+                //Limpa valores do formulário de cep.
+                document.getElementById('rua').value=("");
+                document.getElementById('bairro').value=("");
+                document.getElementById('cidade').value=("");
+                document.getElementById('uf').value=("");
+                document.getElementById('ibge').value=("");
         }
-        </script>   
-    <body>
-        
-        <!-- Start: Header Section -->
+    
+        function meu_callback(conteudo) {
+            if (!("erro" in conteudo)) {
+                //Atualiza os campos com os valores.
+                document.getElementById('rua').value=(conteudo.logradouro);
+                document.getElementById('bairro').value=(conteudo.bairro);
+                document.getElementById('cidade').value=(conteudo.localidade);
+                document.getElementById('uf').value=(conteudo.uf);
+                document.getElementById('ibge').value=(conteudo.ibge);
+            } //end if.
+            else {
+                //CEP não Encontrado.
+                limpa_formulário_cep();
+                alert("CEP não encontrado.");
+            }
+        }
+            
+        function pesquisacep(valor) {
+    
+    //Nova variável "cep" somente com dígitos.
+    var cep = valor.replace(/\D/g, '');
+    
+    //Verifica se campo cep possui valor informado.
+    if (cep != "") {
+    
+        //Expressão regular para validar o CEP.
+        var validacep = /^[0-9]{8}$/;
+    
+        //Valida o formato do CEP.
+        if(validacep.test(cep)) {
+    
+            //Preenche os campos com "..." enquanto consulta webservice.
+            document.getElementById('rua').value="...";
+            document.getElementById('bairro').value="...";
+            document.getElementById('cidade').value="...";
+            document.getElementById('uf').value="...";
+            document.getElementById('ibge').value="...";
+    
+            //Cria um elemento javascript.
+            var script = document.createElement('script');
+    
+            //Sincroniza com o callback.
+            script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+    
+            //Insere script no documento e carrega o conteúdo.
+            document.body.appendChild(script);
+    
+        } //end if.
+        else {
+            //cep é inválido.
+            limpa_formulário_cep();
+            alert("Formato de CEP inválido.");
+        }
+    } //end if.
+    else {
+        //cep sem valor, limpa formulário.
+        limpa_formulário_cep();
+    }
+    };
+    function resumirPedido(){
+        entrega = document.getElementById("slcEntrega").value;
+        switch(entrega){
+            case "1":
+               var entregaSelected = "Correios - 20 dias - R$10,00"
+                valorTotal = valorTotal + 10;
+                break;
+            case "2":
+               var entregaSelected = "Sedex - 7 dias - R$20,00"
+                valorTotal = valorTotal + 20;
+                break;
+        }
+        pgto = document.getElementById("slcPgto").value;
+        switch(pgto){
+            case "1":
+               var formaPgto = "Dinheiro"
+                break;
+            case "2":
+               var formaPgto = "Cartão de crédito"
+                break;
+            case "3":
+               var formaPgto = "Cartão de débito"
+                break;
+            case "4":
+              var formaPgto = "Cheque"
+                break;
+            case "5":
+               var formaPgto = "Paypal"
+                break;
+            
+
+        }
+        document.getElementById("nomeFinalizar").value = document.getElementById("nomeCliente").value;
+        document.getElementById("entregaFinalizar").value = entregaSelected;
+        document.getElementById("formaPgtofinalizar").value = formaPgto;
+        document.getElementById("totalVendaFinalizar").value = valorTotal;  
+
+    }
+    
+     </script>
+        </head>
+    
+        <body>
+            <!-- Start: Header Section -->
         <header id="header-v1" class="navbar-wrapper">
-            <div class="container">
-                <div class="row">
-                    <nav class="navbar navbar-default">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="navbar-header">
-                                    <div class="navbar-brand">
-                                        <h1>
-                                            <a href="index.html">
-                                                <img src="images/logo (2).png" alt="ETEC" />
-                                            </a>
-                                        </h1>
+                <div class="container">
+                    <div class="row">
+                        <nav class="navbar navbar-default">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="navbar-header">
+                                        <div class="navbar-brand">
+                                            <h1>
+                                                <a href="index.html">
+                                                    <img src="images/logo (2).png" alt="ETEC" />
+                                                </a>
+                                            </h1>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="header-topbar hidden-sm hidden-xs">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="topbar-info">
-                                                <a href="tel:+55 (11)96228-5207"><i class="fa fa-phone"></i>(11)96228-5207</a>
-                                                <span>/</span>
-                                                <a href="matheussalermo11@gmail.com"><i class="fa fa-envelope"></i>livrariav@ETEC.com</a>
+                                <div class="col-md-9">
+                                    <div class="header-topbar hidden-sm hidden-xs">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="topbar-info">
+                                                    <a href="tel:+55 (11)96228-5207"><i class="fa fa-phone"></i>(11)96228-5207</a>
+                                                    <span>/</span>
+                                                    <a href="matheussalermo11@gmail.com"><i class="fa fa-envelope"></i>livrariav@ETEC.com</a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="topbar-links">
-                                                <a href="signin.html"><i class="fa fa-lock"></i>Login / Cadastrar</a>
-                                                <span>|</span>
-                                                <div class="header-cart dropdown">
-                                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                                        <i class="fa fa-shopping-cart"><div class="dropdown-menu dropdown-menu-right">
-                                                            <form name = "formVenda">
-                                                                <table border="1"  id="tbProduto" style="color: black;font-family:monospace;border-width: 1px;" >
-                                                                    <thead>
-                                                                        <tr>
-                                                                            <th>Nome</th>
-                                                                            <th>Valor</th>
-                                                                            <th>Quantidade</th>
-                                                                        </tr>
-                                                                    </thead>
-                                                
-                                                
-                                                                </table>
-                                                
-                                                
-                                                            </form>
-                                                        </div>
-                                                      </div></i>
-                                                        <small>0</small>
-                                                    </a>
-                                                  
+                                            <div class="col-sm-6">
+                                                <div class="topbar-links">
+                                                    <a href="signin.html"><i class="fa fa-lock"></i>Login / Cadastrar</a>
+                                                    <span>|</span>
+                                                    <div class="header-cart dropdown">
+                                                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                                            <i class="fa fa-shopping-cart"><div class="dropdown-menu dropdown-menu-right">
+                                                                
+                                                                    
+                                                                    
+    
+                                                            </i>
+                                                            <small>0</small>
+                                                        </a>
+                                                      
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="navbar-collapse hidden-sm hidden-xs">
-                                    <ul class="nav navbar-nav">
-                                        <li>
-                                            <a data-toggle="dropdown" class="dropdown-toggle disabled" href="index.html">Home</a>
-                                          
-                                        </li>
-                                        <li class="dropdown">
-                                            <a data-toggle="dropdown" class="dropdown-toggle disabled" href="produtos.html">Produtos </a>
-                                         
-                                        </li>
-                                        <li class="dropdown">
-                                            <a data-toggle="dropdown" class="dropdown-toggle disabled" href="quemsomos.html">Quem Somos</a>
-                                          
-                                        </li>
-                                 
-                                        <li class="dropdown active"><a href="compra.html">Compre Aqui</a></li>
-                                        <li><a href="contato.html">Fale Conosco</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mobile-menu hidden-lg hidden-md">
-                            <a href="#mobile-menu"><i class="fa fa-navicon"></i></a>
-                            <div id="mobile-menu">
-                                <ul>
-                                    <li class="mobile-title">
-                                        <h4>Navegação</h4>
-                                        <a href="#" class="close"></a>
-                                    </li>
-                                    <li>
-                                        <li class="dropdown active">
-                                            <a data-toggle="dropdown" class="dropdown-toggle disabled" href="index.html">Home</a>
-                                          
-                                        </li>
-                                        <li class="dropdown">
-                                            <a data-toggle="dropdown" class="dropdown-toggle disabled" href="produtos.html">Produtos </a>
-                                         
-                                        </li>
-                                        <li class="dropdown">
-                                            <a data-toggle="dropdown" class="dropdown-toggle disabled" href="quemsomos.html">Quem Somos</a>
-                                          
-                                        </li>
-                                 
-                                        <li><a href="compra.html">Compre Aqui</a></li>
-                                        <li><a href="contato.html">Fale Conosco</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <!-- End: Header Section -->
-        
-        <!-- Start: Slider Section -->
-        <div data-ride="carousel" class="carousel slide" id="home-v1-header-carousel">
-            
-            <!-- Carousel slides -->
-            <div class="carousel-inner">
-                <div class="item active">
-                    <figure>
-                        <img alt="Home Slide" src="images/header-slider/home-v1/header-slide.jpg" />
-                    </figure>
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h3>A melhor Livraria da Região!</h3>
-                            <h2>Escolha de acordo com a sua preferência!</h2>
-                            <p>Livraria com a maior variedade de livros tanto físicos quanto e-books,temos revistas, livros de diversos gêneros,vídeos e muitos outros.Venha nos conhecer. </p>
-                            <div class="slide-buttons hidden-sm hidden-xs">    
-                                <a href="#" class="btn btn-primary">Produtos</a>
-                                <a href="#" class="btn btn-default">Comprar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="item">
-                    <figure>
-                        <img alt="Home Slide" src="images/header-slider/home-v2/header-slide.jpg" />
-                    </figure>
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h3>Acervo mais rico de SP!</h3>
-                            <h2>Conheça nosso trabalho!</h2>
-                            <p>Livraria com a melhor avaliação do Brasil, onde o atendimento faz a diferença devido à facilidade de acesso entre cliente e funcionários.</p>
-                            <div class="slide-buttons hidden-sm hidden-xs">    
-                                <a href="#" class="btn btn-primary">Mais sobre nós</a>
-                                <a href="#" class="btn btn-default">Contato</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Controls -->
-            <a class="left carousel-control" href="#home-v1-header-carousel" data-slide="prev"></a>
-            <a class="right carousel-control" href="#home-v1-header-carousel" data-slide="next"></a>
-        </div>
-        
-        <div class="btn-group" style="padding-left: 4%;">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Right-aligned menu
-            </button>
-            <div class="dropdown-menu dropdown-menu-right">
-                <form name = "formVenda">
-                    <label>Nome:</label>
-                    <input type="text" id="txtNome">
-                    <br>
-                    <label>Cod Produto</label>
-                    <input type="text" id="codProduto">
-                    <br>
-                    <label>Quantidade</label>
-                    <input type="text" id="qtde">
-                    <br>
-                    
-                    <input type="button" value="Add" onclick="addProduto()">
-                    <br>
-                    <table border="1" id="tbProduto">
-                        <thead>
-                            <tr>
-                                <th>Nome</th>
-                                <th>Valor</th>
-                                <th>Quantidade</th>
-                            </tr>
-                        </thead>
-    
-    
-                    </table>
-    
-    
-                </form>
-            </div>
-          </div>
-          <input type="button" value="Add" onclick="addProduto()">
-
-                <!-- Start: Social Network -->
-                <section class="social-network section-padding">
-                    <div class="container">
-                        <div class="center-content">
-                            <h2 class="section-title">Nos Siga</h2>
-                            <span class="underline center"></span>
-                            <p class="lead">Siga-nos em todas as nossas redes sociais para estar por dentro de todas as novidades da livraria.</p>
-                        </div>
-                        <ul>
-                            <li>
-                                <a class="facebook" href="#" target="_blank">
-                                    <span>
-                                        <i class="fa fa-facebook-f"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="twitter" href="#" target="_blank">
-                                    <span>
-                                        <i class="fa fa-twitter"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="google" href="#" target="_blank">
-                                    <span>
-                                        <i class="fa fa-google-plus"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="rss" href="#" target="_blank">
-                                    <span>
-                                        <i class="fa fa-rss"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="linkedin" href="#" target="_blank">
-                                    <span>
-                                        <i class="fa fa-linkedin"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="youtube" href="#" target="_blank">
-                                    <span>
-                                        <i class="fa fa-youtube"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <!-- End: Social Network -->
-        
-                <!-- Start: Footer -->
-                <footer class="site-footer">
-                    <div class="container">
-                        <div id="footer-widgets">
-                            <div class="row">
-                                <div class="col-md-4 col-sm-6 widget-container">
-                                    <div id="text-2" class="widget widget_text">
-                                        <h3 class="footer-widget-title">Sobre a Livraria</h3>
-                                        <span class="underline left"></span>
-                                        <div class="textwidget">
-                                           Uma livraria formada pelos funcionários da Etec de Guaianazes que visa o aprendizado.
-                                        </div>
-                                        <address>
-                                            <div class="info">
-                                                <i class="fa fa-location-arrow"></i>
-                                                <span> R. Felíciano de Mendonça, 290 - Guaianases, São Paulo - SP, 08460-365</span>
-                                            </div>
-                                            <div class="info">
-                                                <i class="fa fa-envelope"></i>
-                                                <span><a href="livraria@ETEC.com">livraria@ETEC.com</a></span>
-                                            </div>
-                                            <div class="info">
-                                                <i class="fa fa-phone"></i>
-                                                <span><a href="tel:(11) 96228-5207">(11) 96228-5207</a></span>
-                                            </div>
-                                        </address>
+                                    <div class="navbar-collapse hidden-sm hidden-xs">
+                                        <ul class="nav navbar-nav">
+                                            <li>
+                                                <a data-toggle="dropdown" class="dropdown-toggle disabled" href="index.html">Home</a>
+                                              
+                                            </li>
+                                            <li class="dropdown">
+                                                <a data-toggle="dropdown" class="dropdown-toggle disabled" href="produtos.html">Produtos </a>
+                                             
+                                            </li>
+                                            <li class="dropdown">
+                                                <a data-toggle="dropdown" class="dropdown-toggle disabled" href="quemsomos.html">Quem Somos</a>
+                                              
+                                            </li>
+                                     
+                                            <li class="dropdown active"><a href="compra.html">Compre Aqui</a></li>
+                                            <li><a href="contato.html">Fale Conosco</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="col-md-2 col-sm-6 widget-container">
-                                    <div id="nav_menu-2" class="widget widget_nav_menu">
-                                        <h3 class="footer-widget-title">Links</h3>
-                                        <span class="underline left"></span>
-                                        <div class="menu-quick-links-container">
-                                            <ul id="menu-quick-links" class="menu">
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="quemsomos.html">Quem Somos</a></li>
-                                                <li><a href="produtos.html">Produtos</a></li>
-                                                <li><a href="compra.html">Compre Aqui</a></li>
-                                                <li><a href="contato.html">Contato</a></li>
-                                                
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                              
-                                <div class="col-md-4 col-sm-6 widget-container">
-                                    <div class="widget twitter-widget">
-                                        <h3 class="footer-widget-title">Últimos Tweets</h3>
-                                        <span class="underline left"></span>
-                                        <div id="twitter-feed">
-                                            <ul>
-                                                <li>
-                                                    <p><a href="#">@LivrariaETEC</a> Chegou na nossa livraria o mais novo lançamento que é sucesso entre os jovens: A culpa é das Estrelas, de John Green. 
-                                                <li>
-                                                    <p><a href="#">@LivrariaETEC</a> Chegou na nossa livraria o mais novo lançamento que é sucesso: Diário de um Banana 13, de Jeff Kinney. 
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>			
-                                </div>
                             </div>
-                        </div>                
-                    </div>
-                    <div class="sub-footer">
-                        <div class="container">
-                            <div class="row">
-                                <div class="footer-text col-md-3">
-                                    <p><a target="_blank" href="https://www.templateshub.net">Livraria ETEC de Guaianazes</a></p>
-                                </div>
-                                <div class="col-md-9 pull-right">
+                            <div class="mobile-menu hidden-lg hidden-md">
+                                <a href="#mobile-menu"><i class="fa fa-navicon"></i></a>
+                                <div id="mobile-menu">
                                     <ul>
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="produtos.html">Produtos</a></li>
-                                        <li><a href="compra.html">Compre Aqui</a></li>
-        
-                                        <li><a href="quemsomos.html">Quem Somos </a></li>
-                                   
-                                        <li><a href="contact.html">Contato</a></li>
+                                        <li class="mobile-title">
+                                            <h4>Navegação</h4>
+                                            <a href="#" class="close"></a>
+                                        </li>
+                                        <li>
+                                            <li class="dropdown active">
+                                                <a data-toggle="dropdown" class="dropdown-toggle disabled" href="index.html">Home</a>
+                                              
+                                            </li>
+                                            <li class="dropdown">
+                                                <a data-toggle="dropdown" class="dropdown-toggle disabled" href="produtos.html">Produtos </a>
+                                             
+                                            </li>
+                                            <li class="dropdown">
+                                                <a data-toggle="dropdown" class="dropdown-toggle disabled" href="quemsomos.html">Quem Somos</a>
+                                              
+                                            </li>
+                                     
+                                            <li><a href="compra.html">Compre Aqui</a></li>
+                                            <li><a href="contato.html">Fale Conosco</a></li>
                                     </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <!-- End: Header Section -->
+            
+            <!-- Start: Slider Section -->
+            <div data-ride="carousel" class="carousel slide" id="home-v1-header-carousel">
+                
+                <!-- Carousel slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <figure>
+                            <img alt="Home Slide" src="images/header-slider/home-v1/header-slide.jpg" />
+                        </figure>
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h3>A melhor Livraria da Região!</h3>
+                                <h2>Escolha de acordo com a sua preferência!</h2>
+                                <p>Livraria com a maior variedade de livros tanto físicos quanto e-books,temos revistas, livros de diversos gêneros,vídeos e muitos outros.Venha nos conhecer. </p>
+                                <div class="slide-buttons hidden-sm hidden-xs">    
+                                    <a href="#" class="btn btn-primary">Produtos</a>
+                                    <a href="#" class="btn btn-default">Comprar</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </footer>
-                <!-- End: Footer -->
-        
-                <!-- jQuery Latest Version 1.x -->
-                <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
                 
-                <!-- jQuery UI -->
-                <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+                    <div class="item">
+                        <figure>
+                            <img alt="Home Slide" src="images/header-slider/home-v2/header-slide.jpg" />
+                        </figure>
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h3>Acervo mais rico de SP!</h3>
+                                <h2>Conheça nosso trabalho!</h2>
+                                <p>Livraria com a melhor avaliação do Brasil, onde o atendimento faz a diferença devido à facilidade de acesso entre cliente e funcionários.</p>
+                                <div class="slide-buttons hidden-sm hidden-xs">    
+                                    <a href="#" class="btn btn-primary">Mais sobre nós</a>
+                                    <a href="#" class="btn btn-default">Contato</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
-                <!-- jQuery Easing -->
-                <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-        
-                <!-- Bootstrap -->
-                <script type="text/javascript" src="js/bootstrap.min.js"></script>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#home-v1-header-carousel" data-slide="prev"></a>
+                <a class="right carousel-control" href="#home-v1-header-carousel" data-slide="next"></a>
+            </div>
+            
+            
+                </div>
+              </div>
+              <form id="contact" name="contact" action="http://libraria.demo.presstigers.com/contact.html" style="margin-top: 1%;margin-left: 3%;margin-right: 3%;" method="get" action=".">
+                <div class="row">
+                        <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <select class="form-control" type="text" placeholder="Nome" name="first-name" id="slcLivro" size="30" value="0" aria-required="true">
+                                            <option value="0">Escolha seu livro</option> 
+                                            <option value="1" selected>O CORTIÇO - Aluísio Azevedo</option>
+                                            <option value="2">MEMÓRIA PÓSTUMAS DE BRÁS CUBAS - Machado de Assis</option>
+                                            <option value="3">IRACEMA - José de Alencar</option>
+                                            <option value="4">O APANHADOR NO CAMPO DE CENTEIO -  J. D. Salinger</option>
+                                            <option value="5">DIÁRIO DE UM BANANA - VOL. 1 - Jeff Kinney</option>
+                                            <option value="6">A CULPA É DAS ESTRELAS - John Green</option>
+                                            <option value="7">CIDADES DE PAPEL - John Green</option>
+                                            <option value="8">DOM QUIXOTE DE LA MANCHA - Miguel de Cervantes</option>
+                                            <option value="9">O PEQUENO PRÍNCIPE - Antoine de Saint-Exupéry</option>
+                                            <option value="10">A DIVINA COMÉDIA - Dante Alighieri</option>
+                                            <option value="11">OS LUSÍADAS - Luís Vaz de Camões</option>
+                                            <option value="12">O ALIENISTA - Machado de Assis</option>
+                                            </select>
+                                            <br>
+                                            <h2 style="color: black;">Dados do Comprador</h2>
+                                            <br>
+                                            <input class="form-control" type="text" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" placeholder="Nome e Sobrenome" id="nomeCliente" size="30" value="" aria-required="true"/>
+                                            <br>
+                                            <input class="form-control" type="text" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" placeholder="CPF" id="cpf" size="30" value="" aria-required="true" oninput="mascara(this)" />
+                                            <br>
+                                            <h2 style="color: black;">Endereço</h2>
+                                            <br>
+                                            <input class="form-control" type="text" placeholder="Escreva o CEP e aperte TAB " name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                                            onblur="pesquisacep(this.value);" />
+                                            <br>
+                                            <input class="form-control"  name="rua" placeholder="Rua" type="text" id="rua" size="60"  />
+                                            <br>
+                                            <input class="form-control"  name="bairro"  placeholder="Bairro"  type="text" id="bairro" size="40"/>
+                                            <br>
+                                            <select class="form-control" type="text" placeholder="Nome" name="first-name" id="slcEntrega" size="30" value="0" aria-required="true">
+                                                    <option value="0" selected>Escolha a forma de envio</option> 
+                                                    <option value="1">Correios - 20 dias - R$10,00</option>
+                                                    <option value="2">Sedex - 7 dias - R$20,00</option>
+                                                    
+                                                    
+                                                    </select>
+                                            
+                                            <h2 style="color: black;">Opções de Pagamento</h2>
+                                            <br>
+                                            
+                                            
+                                            <select class="form-control" type="text" placeholder="Nome" name="first-name" id="slcLivro" size="30" value="0" aria-required="true">
+                                                    <option value="0" selected>Escolha o numero de parcelas</option> 
+                                                    <option value="1">1 parcela</option>
+                                                    <option value="2">2 parcelas</option>
+                                                    <option value="3">3 parcelas</option>
+                                                    <option value="4">4 parcelas</option>
+                                                    <option value="5">5 parcelas</option>
+                                                    <option value="6">6 parcelas</option>
+                                                    <option value="7">7 parcelas</option>
+                                                    <option value="8">8 parcelas</option>
+                                                    <option value="9">9 parcelas</option>
+                                                    <option value="10">10 parcelas</option>
+                                                    
+                                                    </select>
+                                                    <br>
+                                            <h2 style="color: black;">Resumo do Pedido</h2>
+                                            <br>
+                                            <input class="form-control" type="text" placeholder="Nome do Cliente " name="nomeCliente" type="text" id="nomeFinalizar" value="" readonly/>
+                                            
+                                            <br>
+                                            <input class="form-control" type="text" placeholder="Forma de envio " name="entregaFinalizar" type="text" id="entregaFinalizar" value="" readonly/>
+                                            
+                                            <br>
+                                            <input class="form-control" type="text" placeholder="Forma de pagamento " name="formaPgtofinalizar" type="text" id="formaPgtofinalizar" value="" readonly/>
+                                            <br>
+                                            <input class="form-control" type="text" placeholder="Total da venda " name="totalVendaFinalizar" type="text" id="totalVendaFinalizar" value="" readonly/>
+
+                                        </div>
+                                </div>
+                                
+                                <div class="col-md-1 col-sm-1">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" placeholder="Quantidade" id="qtde" size="30" value="" aria-required="true"/>
+                                        <br>
+                                        <h2>.</h2>
+                                        <br>
+                                        
+                                        
+                                        <input class="form-control" type="text"  placeholder="Data de Nascto." id="dataNascto" size="10" value="" aria-required="true" onkeyup="mascara_data(this, this.value)"/>
+                                  <br>
+                                        <input class="form-control" type="text"  placeholder="RG" id="rg" size="15" value="" aria-required="true">
+                                    <br>
+                                    <h2 style="color: white;">.</h2>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    
+                                    <br>
+                                    <input class="form-control" type="text" placeholder="N.º"   id="numero" size="10" value="" aria-required="true">
+                                    <br>
+                                    <input class="form-control" type="text" placeholder="UF"  name="uf" type="text" id="uf" size="2" >
+                                    <br>
+                                    <input class="form-control" type="text" placeholder="Cidade"  name="cidade" type="text" id="cidade" size="40">
+                                        <h2>.</h2>
+                                        <br>
+                                    <select class="form-control" type="text" placeholder="Nome" name="first-name" id="slcPgto" size="30" value="0" aria-required="true">
+                                            <option value="0" selected>Forma de pagamento</option> 
+                                            <option value="1">Dinheiro</option>
+                                            <option value="2">Cartão de crédito</option>
+                                            <option value="3">Cartão de débito</option>
+                                            <option value="4">Cheque</option>
+                                            <option value="5">Paypal</option>
+                                            
+                                            </select>
+                                            
+                                            <br>
+                                            <br>
+                                            
+                                            <input type="button" value="Resumir pedido" onclick="resumirPedido()">
+                                            
+                                            
+                                </div>
+                                </div>
+                    <div class="col-md-5 col-sm-5">
+                        
+                                <table border="1" id="tbProduto">
+                                        <thead>
+                                            <tr>
+                                                <th>Nome</th>
+                                                <th>Valor</th>
+                                                <th>Qtde.</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                    <input type="button" value="Adicionar Livro" onclick="addProduto()">
+                    </div>
+                </div>
+                    <div class="col-sm-12">
+                        <div class="form-group form-submit">
+                            
+                        </div>
+                    </div>
+                    
+                   
                 
-                <!-- Mobile Menu -->
-                <script type="text/javascript" src="js/mmenu.min.js"></script>
-                
-                <!-- Harvey - State manager for media queries -->
-                <script type="text/javascript" src="js/harvey.min.js"></script>
-                
-                <!-- Waypoints - Load Elements on View -->
-                <script type="text/javascript" src="js/waypoints.min.js"></script>
-        
-                <!-- Facts Counter -->
-                <script type="text/javascript" src="js/facts.counter.min.js"></script>
-        
-                <!-- MixItUp - Category Filter -->
-                <script type="text/javascript" src="js/mixitup.min.js"></script>
-        
-                <!-- Owl Carousel -->
-                <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-                
-                <!-- Accordion -->
-                <script type="text/javascript" src="js/accordion.min.js"></script>
-                
-                <!-- Responsive Tabs -->
-                <script type="text/javascript" src="js/responsive.tabs.min.js"></script>
-                
-                <!-- Responsive Table -->
-                <script type="text/javascript" src="js/responsive.table.min.js"></script>
-                
-                <!-- Masonry -->
-                <script type="text/javascript" src="js/masonry.min.js"></script>
-                
-                <!-- Carousel Swipe -->
-                <script type="text/javascript" src="js/carousel.swipe.min.js"></script>
-                
-                <!-- bxSlider -->
-                <script type="text/javascript" src="js/bxslider.min.js"></script>
-                
-                <!-- Google Map API -->
-                <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT5k-RhvFSVIuCALkpHhKgQx6SJUd9gpI"></script>
-        
-                <!-- Google Map (Custom Style) -->
-                <script type="text/javascript" src="js/google.map.js"></script>
-        
-                <!-- Custom Scripts -->
-                <script type="text/javascript" src="js/main.js"></script>
-        
-            </body>
-        
-        
+            </form> 
+        </div>                                                                   
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </main>
+    </div>
+    </div>
+                                                
+                                            
+    
+                    <!-- Start: Social Network -->
+                    <section class="social-network section-padding">
+                        <div class="container">
+                            <div class="center-content">
+                                <h2 class="section-title">Nos Siga</h2>
+                                <span class="underline center"></span>
+                                <p class="lead">Siga-nos em todas as nossas redes sociais para estar por dentro de todas as novidades da livraria.</p>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a class="facebook" href="#" target="_blank">
+                                        <span>
+                                            <i class="fa fa-facebook-f"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="twitter" href="#" target="_blank">
+                                        <span>
+                                            <i class="fa fa-twitter"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="google" href="#" target="_blank">
+                                        <span>
+                                            <i class="fa fa-google-plus"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="rss" href="#" target="_blank">
+                                        <span>
+                                            <i class="fa fa-rss"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="linkedin" href="#" target="_blank">
+                                        <span>
+                                            <i class="fa fa-linkedin"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="youtube" href="#" target="_blank">
+                                        <span>
+                                            <i class="fa fa-youtube"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!-- End: Social Network -->
+            
+                    <!-- Start: Footer -->
+                    <footer class="site-footer">
+                        <div class="container">
+                            <div id="footer-widgets">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-6 widget-container">
+                                        <div id="text-2" class="widget widget_text">
+                                            <h3 class="footer-widget-title">Sobre a Livraria</h3>
+                                            <span class="underline left"></span>
+                                            <div class="textwidget">
+                                               Uma livraria formada pelos funcionários da Etec de Guaianazes que visa o aprendizado.
+                                            </div>
+                                            <address>
+                                                <div class="info">
+                                                    <i class="fa fa-location-arrow"></i>
+                                                    <span> R. Felíciano de Mendonça, 290 - Guaianases, São Paulo - SP, 08460-365</span>
+                                                </div>
+                                                <div class="info">
+                                                    <i class="fa fa-envelope"></i>
+                                                    <span><a href="livraria@ETEC.com">livraria@ETEC.com</a></span>
+                                                </div>
+                                                <div class="info">
+                                                    <i class="fa fa-phone"></i>
+                                                    <span><a href="tel:(11) 96228-5207">(11) 96228-5207</a></span>
+                                                </div>
+                                            </address>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-6 widget-container">
+                                        <div id="nav_menu-2" class="widget widget_nav_menu">
+                                            <h3 class="footer-widget-title">Links</h3>
+                                            <span class="underline left"></span>
+                                            <div class="menu-quick-links-container">
+                                                <ul id="menu-quick-links" class="menu">
+                                                    <li><a href="index.html">Home</a></li>
+                                                    <li><a href="quemsomos.html">Quem Somos</a></li>
+                                                    <li><a href="produtos.html">Produtos</a></li>
+                                                    <li><a href="compra.html">Compre Aqui</a></li>
+                                                    <li><a href="contato.html">Contato</a></li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                    <div class="col-md-4 col-sm-6 widget-container">
+                                        <div class="widget twitter-widget">
+                                            <h3 class="footer-widget-title">Últimos Tweets</h3>
+                                            <span class="underline left"></span>
+                                            <div id="twitter-feed">
+                                                <ul>
+                                                    <li>
+                                                        <p><a href="#">@LivrariaETEC</a> Chegou na nossa livraria o mais novo lançamento que é sucesso entre os jovens: A culpa é das Estrelas, de John Green. 
+                                                    <li>
+                                                        <p><a href="#">@LivrariaETEC</a> Chegou na nossa livraria o mais novo lançamento que é sucesso: Diário de um Banana 13, de Jeff Kinney. 
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>			
+                                    </div>
+                                </div>
+                            </div>                
+                        </div>
+                        <div class="sub-footer">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="footer-text col-md-3">
+                                        <p><a target="_blank" href="https://www.templateshub.net">Livraria ETEC de Guaianazes</a></p>
+                                    </div>
+                                    <div class="col-md-9 pull-right">
+                                        <ul>
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="produtos.html">Produtos</a></li>
+                                            <li><a href="compra.html">Compre Aqui</a></li>
+            
+                                            <li><a href="quemsomos.html">Quem Somos </a></li>
+                                       
+                                            <li><a href="contact.html">Contato</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- End: Footer -->
+            
+                    <!-- jQuery Latest Version 1.x -->
+                    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+                    
+                    <!-- jQuery UI -->
+                    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+                    
+                    <!-- jQuery Easing -->
+                    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+            
+                    <!-- Bootstrap -->
+                    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+                    
+                    <!-- Mobile Menu -->
+                    <script type="text/javascript" src="js/mmenu.min.js"></script>
+                    
+                    <!-- Harvey - State manager for media queries -->
+                    <script type="text/javascript" src="js/harvey.min.js"></script>
+                    
+                    <!-- Waypoints - Load Elements on View -->
+                    <script type="text/javascript" src="js/waypoints.min.js"></script>
+            
+                    <!-- Facts Counter -->
+                    <script type="text/javascript" src="js/facts.counter.min.js"></script>
+            
+                    <!-- MixItUp - Category Filter -->
+                    <script type="text/javascript" src="js/mixitup.min.js"></script>
+            
+                    <!-- Owl Carousel -->
+                    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+                    
+                    <!-- Accordion -->
+                    <script type="text/javascript" src="js/accordion.min.js"></script>
+                    
+                    <!-- Responsive Tabs -->
+                    <script type="text/javascript" src="js/responsive.tabs.min.js"></script>
+                    
+                    <!-- Responsive Table -->
+                    <script type="text/javascript" src="js/responsive.table.min.js"></script>
+                    
+                    <!-- Masonry -->
+                    <script type="text/javascript" src="js/masonry.min.js"></script>
+                    
+                    <!-- Carousel Swipe -->
+                    <script type="text/javascript" src="js/carousel.swipe.min.js"></script>
+                    
+                    <!-- bxSlider -->
+                    <script type="text/javascript" src="js/bxslider.min.js"></script>
+                    
+                    <!-- Google Map API -->
+                    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAT5k-RhvFSVIuCALkpHhKgQx6SJUd9gpI"></script>
+            
+                    <!-- Google Map (Custom Style) -->
+                    <script type="text/javascript" src="js/google.map.js"></script>
+            
+                    <!-- Custom Scripts -->
+                    <script type="text/javascript" src="js/main.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+                </body>
+            
+            
+            </html>
+             
+    
+        <!-- Inicio do formulario -->
+          <form method="get" action=".">
+            
+            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                   onblur="pesquisacep(this.value);" /><br />
+            
+            <input name="rua" type="text" id="rua" size="60" /><br />
+            
+            <input name="bairro" type="text" id="bairro" size="40" /><br />
+            
+            <input name="cidade" type="text" id="cidade" size="40" /><br />
+            
+            <input name="uf" type="text" id="uf" size="2" />><br />
+            
+            <input name="ibge" type="text" id="ibge" size="8" /><br />
+          </form>
+        </body>
+    
         </html>
